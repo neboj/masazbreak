@@ -3,8 +3,6 @@ html, body {
 	margin: 0;
 	--primary-color-lighter: #59afb3;
 	--primary-color-darker: #0a95d8;
-	--nav-height-big: 80px;
-	--nav-height-small: 60px;
 	width: 100%;
     height: 100%;
     font-family: 'Lato';
@@ -14,6 +12,11 @@ html, body {
 #nav {
     white-space:nowrap;
     height: 60px;
+    width: 100%;
+    position: absolute;
+    
+    top:0;
+    z-index: 100;
 }
 
 
@@ -36,8 +39,8 @@ html, body {
 
 .nav-right {
     display: inline-block;
-    /* padding-left: 30%; */
-    position: absolute;
+    padding-top:1%;
+    position: absolute;    
     right: 2%;
 }
 
@@ -52,14 +55,15 @@ html, body {
     text-align: center;
     font-size: 25px;
     line-height: 50px;
-    color: #029AA5;
+    background-color: #029AA5;
+    border-radius: 50%;
+    color:white;
 }
 
 .social.facebook a:hover,
 .social.instagram a:hover {
-    background-color: #029AA5;
-    border-radius: 50%;
-    color:white;
+    transform:scale(1.1);
+    transition: 3s ease-in-out;
 }
 
 
@@ -86,14 +90,9 @@ html, body {
 
 .hero{
     width: 100%;
-    /* height: calc(100% - 60px); */
     height: 100%;
-    box-sizing: border-box;
-    padding: 0 5%;
-    /* background-color: yellow; */
-    /* border: solid 1px; */
+    padding-top: 100px !important;
     position: relative;
-    
 }
 
 .hero::before {
@@ -101,10 +100,12 @@ html, body {
     position: absolute;
     top:0;
     left:0;
-    height: 80%;
+    height: 100%;
     width: 100%;
     background-image: url("../images/b.PNG");    
     background-repeat-y: no-repeat;
+    background-repeat-x: no-repeat;
+    background-size: cover;
 }
 
 .heading-container {
@@ -129,11 +130,8 @@ html, body {
 
 .hero-left {
     display: inline-block;
-    /* background-color: green; */
-    width:49%;
+    width:100%;
     height: 100%;
-    overflow:hidden;
-    /* border: solid 1px; */
     position: relative;
 }
 
@@ -216,6 +214,7 @@ html, body {
     display: inline-block;
 }
 
+
 .mantra-4 {
     display: inline-block;
     margin-left: 60%;
@@ -235,12 +234,20 @@ html, body {
 }
 
 section {
-    margin-bottom: 5%;
+    padding:80px 0;
 }
+
+#sec-2 {
+    background-color:white;
+    height: 100%;
+    width:100%;
+}
+
 
 footer {
     height: 400px;
     background-image: url("../images/a.PNG") ;
     background-repeat-y: no-repeat;
     color:white;
+    background-size: cover;
 }
