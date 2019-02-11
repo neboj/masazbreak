@@ -93,17 +93,18 @@ html, body {
     /* background-color: yellow; */
     /* border: solid 1px; */
     position: relative;
-    background-image: url("../images/a.PNG") ;
-    background-repeat-x: no-repeat; 
+    
 }
 
 .hero::before {
-    content: "saa";
+    content: "";
     position: absolute;
     top:0;
     left:0;
-    height: 100vh;
-    background-color:red;
+    height: 80%;
+    width: 100%;
+    background-image: url("../images/b.PNG");    
+    background-repeat-y: no-repeat;
 }
 
 .heading-container {
@@ -239,6 +240,7 @@ section {
 
 footer {
     height: 400px;
-    background-color: #029AA5;
+    background-image: url("../images/a.PNG") ;
+    background-repeat-y: no-repeat;
     color:white;
 }
